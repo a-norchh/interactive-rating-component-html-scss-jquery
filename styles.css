@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216deg, 12%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+.card {
+  width: 43rem;
+  background-color: hsl(213deg, 19%, 18%);
+  background-image: linear-gradient(to bottom, transparent, rgba(18, 20, 23, 0.6));
+  padding: 3.5rem;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    padding: 2.5rem;
+  }
+}
+.card .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(124, 135, 152, 0.15);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.card article {
+  margin: 3.5rem auto 2.5rem;
+}
+@media only screen and (max-width: 500px) {
+  .card article {
+    margin: 2rem auto 1.5rem;
+  }
+}
+.card article h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.card article p {
+  line-height: 1.6;
+  opacity: 0.6;
+}
+.card .rating-contain .rate-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.card .rating-contain .rate-btn .rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(124, 135, 152, 0.15);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 500px) {
+  .card .rating-contain .rate-btn .rate {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.6rem;
+  }
+}
+.card .rating-contain .rate-btn .rate:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(217deg, 12%, 63%);
+}
+.card .rating-contain .rate-btn .rate.selected {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(25deg, 97%, 53%);
+}
+.card .rating-contain .btn {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 0.5rem;
+  margin-top: 3rem;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: hsl(25deg, 97%, 53%);
+  transition: all 0.3s;
+  font-weight: 700;
+}
+.card .rating-contain .btn:hover {
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.step--2 {
+  display: none;
+  text-align: center;
+}
+.step--2 picture {
+  display: block;
+  margin-bottom: 4rem;
+}
+.step--2 .your-rate {
+  background-color: rgba(124, 135, 152, 0.15);
+  color: hsl(25deg, 97%, 53%);
+  padding: 1rem 3rem;
+  border-radius: 20px;
+}
+.step--2 h2 {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+}
+.step--2 p {
+  padding: 0 1rem;
+}/*# sourceMappingURL=styles.css.map */
