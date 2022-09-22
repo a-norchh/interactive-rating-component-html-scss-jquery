@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+$main-color: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bg-fade {
+  background-color: rgba($medium-grey, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  color: $white;
+  font-family: "Overpass", sans-serif;
+  background-color: $very-dark-blue;
+  @include flex-center;
+}
+
+// - Mobile: 375px
+// - Desktop: 1440px
+main {
+  @media only screen and (max-width: 500px) {
+    padding: 2rem;
+  }
+}
+
+.card {
+  width: 43rem;
+  background-color: $dark-blue;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba($very-dark-blue, 0.6)
+  );
+  padding: 3.5rem;
+  border-radius: 20px;
+
+  @media only screen and (max-width: 500px) {
+    padding: 2.5rem;
+  }
+
+  .star {
+    @include flex-center;
+    @include bg-fade;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  article {
+    margin: 3.5rem auto 2.5rem;
+    @media only screen and (max-width: 500px) {
+      margin: 2rem auto 1.5rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      line-height: 1.6;
+      opacity: 0.6;
+    }
+  }
+
+  .rating-contain {
+    .rate-btn {
+      display: flex;
+      justify-content: space-between;
+      .rate {
+        @include flex-center;
+        @include bg-fade;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        color: rgba($white, 0.5);
+        cursor: pointer;
+        transition: all 0.3s;
+
+        @media only screen and (max-width: 500px) {
+          width: 4.5rem;
+          height: 4.5rem;
+          font-size: 1.6rem;
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $light-grey;
+        }
+
+        &.selected {
+          color: $white;
+          background-color: $main-color;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1.5rem;
+      border: none;
+      color: $white;
+      letter-spacing: 0.5rem;
+      margin-top: 3rem;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: $main-color;
+      transition: all 0.3s;
+      font-weight: 700;
+
+      &:hover {
+        color: $main-color;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.step--2 {
+  display: none;
+  text-align: center;
+
+  picture {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .your-rate {
+    @include bg-fade;
+    color: $main-color;
+    padding: 1rem 3rem;
+    border-radius: 20px;
+  }
+
+  h2 {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    padding: 0 1rem;
+  }
+}
